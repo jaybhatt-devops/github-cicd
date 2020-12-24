@@ -34,10 +34,10 @@ jobs:
     - name: Final listing
       run: ls -la
 
-    - name: Connecting to Ec2
+#    - name: Connecting to Ec2
 #      env: 
 #        super_secret: ${{ secrets.EC2 }}
-      run: ssh -i '$secrets.EC2'  ubuntu@13.233.92.41
+#      run: ssh -i '$secrets.EC2'  ubuntu@13.233.92.41
 #        echo '$super_secret'
 #       ls -la
 
@@ -45,3 +45,12 @@ jobs:
 #      run: |
 #         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
+
+     - name: ssh deploy
+       uses: easingthemes/ssh-deploy@v2.1.5
+       env:
+           SSH_PRIVATE_KEY: ${{ secrets.EC2 }}
+           SOURCE: ${{ secrets.SOURCE }}
+           REMOTE_HOST: ${{ secrets.HOST }}
+           REMOTE_USER: ${{ secrets.USER }}
+           TARGET: ${{ secrets.TARGET }}
