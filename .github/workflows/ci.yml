@@ -47,6 +47,7 @@ jobs:
       run: |
           sudo apt install ssh-askpass
           echo "$pass" > newkey
+          ls -la
           chmod 600 newkey
           ssh-keygen -f newkey -y > newkey.pub
           ls -la
