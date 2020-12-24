@@ -43,7 +43,7 @@ jobs:
 
     - name: Copying Jar File to remote host
       run: |
-          echo "${{ secrets.DISPLAY }}""
+          echo "${{ secrets.DISPLAY }}"
 #         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
 #    - name: ssh deploy
