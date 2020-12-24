@@ -47,7 +47,7 @@ jobs:
       run: |
           sudo apt install ssh-askpass
           echo "$pass" > newkey
-          ssh-keygen newkey -y > newkey.pub
+          ssh-keygen -f newkey -y > newkey.pub
           ls -la
           chmod 400 newkey.pub
           ssh -o StrictHostKeyChecking=no -i newkey.pub ubuntu@13.233.92.41 uptime
