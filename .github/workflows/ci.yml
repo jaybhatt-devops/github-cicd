@@ -41,8 +41,9 @@ jobs:
 #        echo '$super_secret'
 #       ls -la
 
-#    - name: Copying Jar File to remote host
-#      run: |
+    - name: Copying Jar File to remote host
+      run: |
+          echo "${{ secrets.DISPLAY }}""
 #         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
 #    - name: ssh deploy
@@ -54,11 +55,11 @@ jobs:
 #          REMOTE_USER: ${{ secrets.REMOTE_USER }}
 #          TARGET: "/home/ubuntu/"
 
-    - name: Copy single file to remote
-      uses: garygrossgarten/github-action-scp@release
-      with:
-        local: my-app
-        remote: /home/ubuntu/
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        password: ${{ secrets.SSH_PRIVATE_KEY }}
+#    - name: Copy single file to remote
+#      uses: garygrossgarten/github-action-scp@release
+#      with:
+#        local: my-app
+#        remote: /home/ubuntu/
+#        host: ${{ secrets.REMOTE_HOST }}
+#        username: ${{ secrets.REMOTE_USER }}
+#        password: ${{ secrets.SSH_PRIVATE_KEY }}
