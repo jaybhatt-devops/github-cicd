@@ -47,6 +47,7 @@ jobs:
       run: |
           echo "$DISPLAY" > key
           ls -la
+          cat key
 #          scp -i $pass *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
 #    - name: ssh deploy
