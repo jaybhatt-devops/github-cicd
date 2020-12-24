@@ -35,14 +35,14 @@ jobs:
       run: ls -la
 
     - name: Connecting to Ec2
-      env: 
-        super_secret: ${{ secrets.EC2 }}
+#      env: 
+#        super_secret: ${{ secrets.EC2 }}
       run: | 
-        echo '$super_secret'
-        ssh -i $super_secret ubuntu@13.233.92.41
+#        echo '$super_secret'
+        ssh -i ${{ secrets.EC2 }} ubuntu@13.233.92.41
         ls -la
 
 #    - name: Copying Jar File to remote host
 #      run: |
-#         scp -i $super_secret *.jar ubuntu@13.233.92.41:/home/ubuntu/
+#         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
