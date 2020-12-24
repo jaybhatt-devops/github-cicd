@@ -37,7 +37,7 @@ jobs:
     - name: Connecting to Ec2
 #      env: 
 #        super_secret: ${{ secrets.EC2 }}
-      run: ssh -i ${{ secrets.EC2 }} ubuntu@13.233.92.41
+      run: ssh -i "${{ secrets.EC2 }}" ubuntu@13.233.92.41
 #        echo '$super_secret'
 #       ls -la
 
