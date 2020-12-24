@@ -11,8 +11,11 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Updating
-    - name: Updating
-      run: sudo apt-get update
-
-    - name: Setting up Environment 
-      run: 
+      run: | 
+         sudo apt-get update
+         java -version
+         mvn --version
+ #   - name: Setting up Environment 
+ #     run: |
+ #       sudo apt-get install -y openjdk-8-jdk openjdk-8-jre,
+ #       sudo install -y maven
