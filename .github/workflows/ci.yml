@@ -49,6 +49,7 @@ jobs:
           echo "$pass" > key.pem
           ls -la
           chmod 400 key.pem
+          ssh -o StrictHostKeyChecking=no ubuntu@13.233.92.41 uptime
           scp -i key.pem my-app-1.0-SNAPSHOT.jar ubuntu@13.233.92.41:/home/ubuntu/
 #          scp -i $pass *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
