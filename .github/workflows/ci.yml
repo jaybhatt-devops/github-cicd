@@ -46,6 +46,7 @@ jobs:
         DISPLAY: ${{ secrets.DISPLAY }}
       run: |
           sudo apt install ssh-askpass
+          chmod 400 key
           echo "$DISPLAY" > key
           ls -la
           cat key
