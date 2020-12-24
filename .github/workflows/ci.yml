@@ -47,7 +47,6 @@ jobs:
       run: |
           sudo apt install ssh-askpass
           ls -la
-#          chmod 600 newkey 
           ssh-keygen -f $pass -e -m pem -e > newkey.pem
           ls -la
           chmod 644 newkey.pem
