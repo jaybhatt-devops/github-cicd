@@ -10,12 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
+    - name: Listing Files
+      run: ls -la
+
     - name: Updating
-      run: | 
-         sudo apt-get update
-         java -version
-         mvn --version
- #   - name: Setting up Environment 
- #     run: |
- #       sudo apt-get install -y openjdk-8-jdk openjdk-8-jre,
- #       sudo install -y maven
+      run: sudo apt-get update
+
+    - name: Setting up Environment 
+      run: 
