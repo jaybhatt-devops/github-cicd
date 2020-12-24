@@ -45,7 +45,7 @@ jobs:
       env: 
         pass: 12345678
       run: |
-          echo '$pass'
+          echo "$pass"
 #         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
 #    - name: ssh deploy
