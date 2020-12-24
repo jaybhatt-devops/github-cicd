@@ -55,7 +55,7 @@ jobs:
 #          TARGET: "/home/ubuntu/"
 
     - name: Copy single file to remote
-        uses: garygrossgarten/github-action-scp@release
+      uses: garygrossgarten/github-action-scp@release
         with:
           local: *.jar
           remote: /home/ubuntu/
