@@ -46,7 +46,7 @@ jobs:
         pass: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
           echo "$pass"
-#         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
+          scp -i $pass *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
 #    - name: ssh deploy
 #      uses: easingthemes/ssh-deploy@v2.1.5
