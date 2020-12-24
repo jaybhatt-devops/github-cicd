@@ -14,6 +14,7 @@ jobs:
       run: | 
          sudo apt-get update
          java -version
+         mvn --version
  #   - name: Setting up Environment 
  #     run: |
  #       sudo apt-get install -y openjdk-8-jdk openjdk-8-jre,
