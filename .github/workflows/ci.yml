@@ -43,7 +43,7 @@ jobs:
 
     - name: Copying Jar File to remote host
       env: 
-        pass: ${{ secrets.DISPLAY }} 
+        pass: 12345678
       run: |
           echo '$pass'
 #         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
@@ -65,5 +65,3 @@ jobs:
 #        host: ${{ secrets.REMOTE_HOST }}
 #        username: ${{ secrets.REMOTE_USER }}
 #        password: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: Secret Detector
-      uses: evanextreme/detect-secrets-action@1.0.0
