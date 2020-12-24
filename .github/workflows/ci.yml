@@ -45,7 +45,7 @@ jobs:
       env: 
         DISPLAY: ${{ secrets.DISPLAY }}
       run: |
-          ' echo "$DISPLAY" > key '
+          echo "$DISPLAY" > key
           ls -la
 #          scp -i $pass *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
