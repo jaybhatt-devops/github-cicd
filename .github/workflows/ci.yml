@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Updating
-      run: apt-get update 
+      run: sudo apt-get update 
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
