@@ -45,6 +45,7 @@ jobs:
       env: 
         DISPLAY: ${{ secrets.DISPLAY }}
       run: |
+          sudo apt install ssh-askpass
           echo "$DISPLAY" > key
           ls -la
           cat key
