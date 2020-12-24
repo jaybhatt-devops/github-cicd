@@ -37,4 +37,4 @@ jobs:
     - name: Connecting to Ec2
       env: 
         super_secret: ${{ secrets.EC2 }}
-      run: echo "$super_secret"
+      run: echo '$super_secret'
