@@ -10,8 +10,26 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Updating
-      run: sudo apt-get update
+#    - name: Updating
+#      run: sudo apt-get update
  
     - name: Listing Files 
+      run: ls -la
+
+    - name: Build Stage
+      run: |
+        mvn clean --file my-app/pom.xml
+        echo Build started on `date`
+        mvn test -f my-app/pom.xml
+        ls -la
+
+    - name: Post-Build Stage
+      run: |
+         echo Build Completed on `date`
+         mvn package -f my-app/pom.xml
+
+    - name: Copying JAR file for Deployment
+      run: cp my-app/target/*.jar . 
+
+    - name: Final listing
       run: ls -la
