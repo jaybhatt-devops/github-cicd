@@ -43,7 +43,7 @@ jobs:
 
     - name: Copying Jar File to remote host
       env: 
-        pass: 12345678
+        pass: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
           echo "$pass"
 #         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
