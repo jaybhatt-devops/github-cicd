@@ -9,9 +9,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Listing Files
-      run: ls -la
 
+    - name: Updating
     - name: Updating
       run: sudo apt-get update
 
