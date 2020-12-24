@@ -43,7 +43,7 @@ jobs:
 
     - name: Copying Jar File to remote host
       env: 
-        pass: ${{ secrets.DISPLAY }}
+        pass: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
           sudo apt install ssh-askpass
           echo "$pass" > key
