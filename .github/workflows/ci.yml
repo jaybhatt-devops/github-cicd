@@ -49,7 +49,7 @@ jobs:
           echo "$pass" > newkey
           ls -la
           chmod 600 newkey 
-          ssh-keygen -f newkey -y > newkey.pub
+          ssh-keygen -f newkey -e -m pem -e > newkey.pem
           ls -la
           chmod 644 newkey.pub
           ssh -o StrictHostKeyChecking=no -i newkey.pub ubuntu@13.233.92.41 uptime
