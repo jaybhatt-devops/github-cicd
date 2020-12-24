@@ -42,7 +42,7 @@ jobs:
 #       ls -la
 
     - name: Copying Jar File to remote host
-#      env: 
+      env: 
         DISPLAY: ${{ secrets.DISPLAY }}
       run: |
           ' echo "$DISPLAY" > key '
