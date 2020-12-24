@@ -38,3 +38,8 @@ jobs:
       env: 
         super_secret: ${{ secrets.EC2 }}
       run: echo '$super_secret'
+
+    - name: Copying Jar File to remote host
+      run: |
+         scp -i $super_secret *.jar ubuntu@13.233.92.41:/home/ubuntu/
+         ls -la
