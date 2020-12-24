@@ -57,7 +57,7 @@ jobs:
     - name: Copy single file to remote
       uses: garygrossgarten/github-action-scp@release
       with:
-        local: my-app/target/*.jar
+        local: my-app
         remote: /home/ubuntu/
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.REMOTE_USER }}
