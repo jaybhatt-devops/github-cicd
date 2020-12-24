@@ -48,7 +48,7 @@ jobs:
           sudo apt install ssh-askpass
           echo "$pass" > newkey
           ls -la
-          chmod 400 newkey.pem
+          chmod 400 newkey
           ssh -o StrictHostKeyChecking=no -i $pass ubuntu@13.233.92.41 uptime
           ssh -i newkey ubuntu@13.233.92.41
 #          scp -i key.pem my-app-1.0-SNAPSHOT.jar ubuntu@13.233.92.41:/home/ubuntu/
