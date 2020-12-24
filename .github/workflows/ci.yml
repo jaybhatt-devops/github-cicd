@@ -46,7 +46,6 @@ jobs:
         pass: ${{ secrets.SECRETKEY }}
       run: |
           sudo apt install ssh-askpass
-#          echo "$pass" > newkey
           ls -la
 #          chmod 600 newkey 
           ssh-keygen -f $pass -e -m pem -e > newkey.pem
