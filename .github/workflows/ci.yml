@@ -46,11 +46,11 @@ jobs:
         pass: ${{ secrets.SECRETKEY }}
       run: |
           sudo apt install ssh-askpass
-          echo "$pass" > key.pem
+          echo "$pass" > newkey.pem
           ls -la
-          chmod 400 key.pem
-          ssh -o StrictHostKeyChecking=no -i Key.pem ubuntu@13.233.92.41 uptime
-          ssh -i Key.pem ubuntu@13.233.92.41
+          chmod 400 newkey.pem
+          ssh -o StrictHostKeyChecking=no -i newkey.pem ubuntu@13.233.92.41 uptime
+          ssh -i newkey.pem ubuntu@13.233.92.41
 #          scp -i key.pem my-app-1.0-SNAPSHOT.jar ubuntu@13.233.92.41:/home/ubuntu/
 #          scp -i $pass *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
