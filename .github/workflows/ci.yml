@@ -65,6 +65,5 @@ jobs:
 #        host: ${{ secrets.REMOTE_HOST }}
 #        username: ${{ secrets.REMOTE_USER }}
 #        password: ${{ secrets.SSH_PRIVATE_KEY }}
-
      - name: Secret Detector
-     uses: evanextreme/detect-secrets-action@1.0.0
+       uses: evanextreme/detect-secrets-action@1.0.0
