@@ -45,7 +45,7 @@ jobs:
       env: 
         pass: ${{ secrets.DISPLAY }} 
       run: |
-          echo  $pass
+          echo '$pass'
 #         scp -i ${{ secrets.EC2 }} *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
 #    - name: ssh deploy
@@ -65,3 +65,6 @@ jobs:
 #        host: ${{ secrets.REMOTE_HOST }}
 #        username: ${{ secrets.REMOTE_USER }}
 #        password: ${{ secrets.SSH_PRIVATE_KEY }}
+
+     - name: Secret Detector
+     uses: evanextreme/detect-secrets-action@1.0.0
