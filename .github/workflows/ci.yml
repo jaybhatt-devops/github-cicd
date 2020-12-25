@@ -51,7 +51,7 @@ jobs:
           echo "$pass" > pass.pem
           cat pass.pem
           ls -la
-          chmod 644 pass.pem
+          chmod 600 pass.pem
           ssh -o StrictHostKeyChecking=no -i pass.pem ubuntu@13.233.92.41 uptime
 #          ssh -i newkey.pem ubuntu@13.233.92.41
 #          scp -i key.pem my-app-1.0-SNAPSHOT.jar ubuntu@13.233.92.41:/home/ubuntu/
