@@ -48,8 +48,8 @@ jobs:
       run: |
           sudo apt install ssh-askpass
           ls -la
-          echo "$show" > show.pem
-          cat show.pem
+          echo "$pass" > pass.pem
+          cat pass.pem
           ls -la
 #         chmod 644 newkey.pem
 #          ssh -o StrictHostKeyChecking=no -i newkey.pem ubuntu@13.233.92.41 uptime ssh-keygen -f $show -e -m pem > show.pem
