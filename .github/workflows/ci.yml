@@ -49,11 +49,10 @@ jobs:
           sudo apt install ssh-askpass
           ls -la
           echo "$show" > show.pem
-#          ssh-keygen -f $show -e -m pem > show.pem
           cat show.pem
           ls -la
           chmod 644 newkey.pem
-#          ssh -o StrictHostKeyChecking=no -i newkey.pem ubuntu@13.233.92.41 uptime
+#          ssh -o StrictHostKeyChecking=no -i newkey.pem ubuntu@13.233.92.41 uptime ssh-keygen -f $show -e -m pem > show.pem
 #          ssh -i newkey.pem ubuntu@13.233.92.41
 #          scp -i key.pem my-app-1.0-SNAPSHOT.jar ubuntu@13.233.92.41:/home/ubuntu/
 #          scp -i $pass *.jar ubuntu@13.233.92.41:/home/ubuntu/
