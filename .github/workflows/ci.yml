@@ -48,7 +48,8 @@ jobs:
       run: |
           sudo apt install ssh-askpass
           ls -la
-          ssh-keygen -f $show -e -m pem > show.pem
+          echo "$show" > show.pem
+#          ssh-keygen -f $show -e -m pem > show.pem
           cat show.pem
           ls -la
           chmod 644 newkey.pem
