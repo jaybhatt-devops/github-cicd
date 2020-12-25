@@ -44,14 +44,16 @@ jobs:
     - name: Copying Jar File to remote host
       env: 
         pass: ${{ secrets.SECRETKEY }}
+        show: 1234567890
       run: |
           sudo apt install ssh-askpass
           ls -la
-          ssh-keygen -f $pass -e -m pem -e > newkey.pem
+          ssh-keygen -f $show -e -m pem > show.pem
+          cat show.pem
           ls -la
           chmod 644 newkey.pem
-          ssh -o StrictHostKeyChecking=no -i newkey.pem ubuntu@13.233.92.41 uptime
-          ssh -i newkey.pem ubuntu@13.233.92.41
+#          ssh -o StrictHostKeyChecking=no -i newkey.pem ubuntu@13.233.92.41 uptime
+#          ssh -i newkey.pem ubuntu@13.233.92.41
 #          scp -i key.pem my-app-1.0-SNAPSHOT.jar ubuntu@13.233.92.41:/home/ubuntu/
 #          scp -i $pass *.jar ubuntu@13.233.92.41:/home/ubuntu/
 #         ls -la
